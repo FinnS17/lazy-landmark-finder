@@ -12,7 +12,7 @@ def get_train_clean_transform():
 # ----- for robust training set
 def get_train_robust_transform():
     return transforms.Compose([
-        transforms.Resize((224,224)),
+        transforms.Resize((IMG_SIZE,IMG_SIZE)),
         transforms.RandomApply([
             transforms.RandomRotation(degrees=10),
             transforms.RandomResizedCrop(IMG_SIZE, scale=(0.6, 1.0), ratio=(0.8,1.25)),
