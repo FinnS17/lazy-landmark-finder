@@ -1,0 +1,14 @@
+{
+    "stage": "clean_finetune",
+    "seed": 42,
+    "checkpoint": "models/clean_finetune.pth",
+    "clean_test": {
+        "loss": 0.14412614259498693,
+        "accuracy": 0.958904109589041
+    },
+    "lazy_test": {
+        "loss": 0.8810287478723025,
+        "accuracy": 0.7411679884643114
+    },
+    "lazy_drop_abs": 0.21773612112472962
+}
