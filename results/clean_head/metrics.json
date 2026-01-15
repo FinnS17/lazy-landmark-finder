@@ -1,0 +1,14 @@
+{
+    "stage": "clean_head",
+    "seed": 42,
+    "checkpoint": "models/clean_head.pth",
+    "clean_test": {
+        "loss": 0.25624253655090207,
+        "accuracy": 0.9242970439798125
+    },
+    "lazy_test": {
+        "loss": 0.9413289901188747,
+        "accuracy": 0.6971881759192502
+    },
+    "lazy_drop_abs": 0.2271088680605623
+}

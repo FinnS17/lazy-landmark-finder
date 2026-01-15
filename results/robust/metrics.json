@@ -1,0 +1,14 @@
+{
+    "stage": "robust",
+    "seed": 42,
+    "checkpoint": "models/robust.pth",
+    "clean_test": {
+        "loss": 0.10685948986967213,
+        "accuracy": 0.9689978370583994
+    },
+    "lazy_test": {
+        "loss": 0.33560638278992716,
+        "accuracy": 0.9069935111751981
+    },
+    "lazy_drop_abs": 0.06200432588320126
+}

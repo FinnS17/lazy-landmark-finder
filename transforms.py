@@ -1,6 +1,7 @@
 from torchvision import transforms
 from configs import IMAGENET_MEAN, IMAGENET_STD, IMG_SIZE
 
+# ----- for clean training set
 def get_train_clean_transform():
     return transforms.Compose([
         transforms.Resize((IMG_SIZE, IMG_SIZE)),
@@ -8,6 +9,7 @@ def get_train_clean_transform():
         transforms.Normalize(mean= IMAGENET_MEAN, std= IMAGENET_STD)
     ])
 
+# ----- for robust training set
 def get_train_robust_transform():
     return transforms.Compose([
         transforms.Resize((224,224)),
@@ -20,6 +22,7 @@ def get_train_robust_transform():
         transforms.ToTensor(),
         transforms.Normalize(mean= IMAGENET_MEAN, std= IMAGENET_STD)])
 
+# ----- for clean validation/testing
 def get_eval_clean_transform():
     return transforms.Compose([
         transforms.Resize((IMG_SIZE, IMG_SIZE)),
@@ -27,6 +30,7 @@ def get_eval_clean_transform():
         transforms.Normalize(mean= IMAGENET_MEAN, std= IMAGENET_STD)
     ])
 
+# ----- for lazy validation/testing
 def get_eval_lazy_transform():
     return transforms.Compose([
         transforms.RandomRotation(degrees=10),
