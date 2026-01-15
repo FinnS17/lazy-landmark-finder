@@ -1,6 +1,6 @@
-# Lazy Landmark Finder
+# Robust image classification under realistic visual corruptions
 
-Robust image classification under realistic visual corruptions. Train a landmark classifier that stays accurate on clean images and degrades less when images are blurred, cropped, or color-shifted.
+Train a landmark classifier that stays accurate on clean images and degrades less when images are blurred, cropped, or color-shifted.
 
 ## Motivation
 
