@@ -53,15 +53,17 @@ def make_loaders(train_split, val_split, test_split, train_transform, eval_trans
     val_ds = HFDatasetTorch(val_split, eval_transform)
     test_ds = HFDatasetTorch(test_split, eval_transform)
     lazy_test_ds = HFDatasetTorch(test_split, lazy_eval_transform)
+    lazy_val_ds = HFDatasetTorch(val_split, lazy_eval_transform)
     train_robust_ds = HFDatasetTorch(train_split, train_robust_transform)
 
     train_loader = torch.utils.data.DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
     val_loader = torch.utils.data.DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=False)
     test_loader = torch.utils.data.DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False)
     lazy_test_loader = torch.utils.data.DataLoader(lazy_test_ds, batch_size=BATCH_SIZE, shuffle=False)
+    lazy_val_loader = torch.utils.data.DataLoader(lazy_val_ds, batch_size=BATCH_SIZE, shuffle=False)
     robust_train_loader = torch.utils.data.DataLoader(train_robust_ds, batch_size=BATCH_SIZE, shuffle=True)
 
-    return train_loader, val_loader, test_loader, lazy_test_loader, robust_train_loader
+    return train_loader, val_loader, test_loader, lazy_test_loader, robust_train_loader, lazy_val_loader
 
     
     

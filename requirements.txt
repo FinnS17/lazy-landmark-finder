@@ -1,0 +1,10 @@
+# Deep Learning
+torch>=2.0
+torchvision>=0.15
+
+# Data handling
+datasets>=2.16.0
+numpy>=1.23
+
+# Visualization
+matplotlib>=3.7
