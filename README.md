@@ -1,4 +1,4 @@
-# Robust image classification under realistic visual corruptions
+# Robust Landmark Recognition under Image Corruptions
 
 Train a landmark classifier that stays accurate on clean images and degrades less when images are blurred, cropped, or color-shifted.
 
@@ -63,27 +63,22 @@ Robust training reduces the absolute accuracy drop under corruption from ~21.8% 
 
 ## Visualizations
 
-**1) Clean vs Lazy Examples (add this figure)**
+**1) Clean vs Lazy Examples**
 
-TODO: add a 4-6 image grid here (clean on top row, lazy on bottom row).
+![Clean vs Lazy Examples](results/examples/clean_vs_lazy_examples.png)
 
-Caption: Example clean test images (top) and corresponding "lazy" corruptions (bottom) used during robustness evaluation.
+Example clean test images (left) and corresponding "lazy" corruptions (right) used during robustness evaluation.
 
-**2) Clean vs Lazy Validation Accuracy**
+**2) Clean vs Lazy Validation Accuracy (Robust Training)**
 
 ![Clean vs Lazy Accuracy](results/robust/clean_vs_lazy_val_accuracy.png)
 
-Caption: Validation accuracy on clean vs corrupted images during robust training. Robust fine-tuning significantly improves performance under corruption while largely preserving clean accuracy.
+Validation accuracy on clean vs corrupted images during robust training. Robust fine-tuning significantly improves performance under corruption while preserving clean accuracy.
 
-**3) Loss Curves (optional)**
-
-![Robust Loss Curves](results/robust/Robustness_loss_curves.png)
-
-Caption: Training and validation loss during robust fine-tuning.
 
 ## Key Takeaways
 
-- Clean accuracy alone is a poor proxy for real-world performance.
+- Clean accuracy alone is a poor indicator for real-world performance.
 - Targeted augmentations can recover >10% absolute accuracy under corruption.
 - Robust fine-tuning preserves clean accuracy while reducing sensitivity to noise.
 
